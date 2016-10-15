@@ -1,0 +1,51 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "XlUWR7DaSOGnOY+UXAHfNjl2Ykk=",
+			"path": "github.com/apex/log",
+			"revision": "560a983048f4a827311b7f1ea6cf31168887a0af",
+			"revisionTime": "2016-04-18T14:24:54Z"
+		},
+		{
+			"checksumSHA1": "O6Yc/YmtkjNtjXT1NOn/8y6bm/Q=",
+			"path": "github.com/apex/log/handlers/discard",
+			"revision": "560a983048f4a827311b7f1ea6cf31168887a0af",
+			"revisionTime": "2016-04-18T14:24:54Z"
+		},
+		{
+			"checksumSHA1": "iFNhG0t0VNhyXbA7Vrk8sJBJew8=",
+			"path": "github.com/apex/log/handlers/memory",
+			"revision": "560a983048f4a827311b7f1ea6cf31168887a0af",
+			"revisionTime": "2016-04-18T14:24:54Z"
+		},
+		{
+			"checksumSHA1": "JYVxwR0rMkpsCZkQzig/lQszMI4=",
+			"origin": "github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "8d64eb7173c7753d6419fd4a9caf057398611364",
+			"revisionTime": "2016-05-24T23:42:29Z"
+		},
+		{
+			"checksumSHA1": "c9wNpArfUdqwVy+JecUDVULXHAE=",
+			"path": "github.com/go-logfmt/logfmt",
+			"revision": "08ab82a63ef462ac643ec79e659f023891f588f5",
+			"revisionTime": "2016-03-28T20:53:39Z"
+		},
+		{
+			"checksumSHA1": "+oyIJwPyeof36XCkY8awrNfxaNM=",
+			"origin": "github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "8d64eb7173c7753d6419fd4a9caf057398611364",
+			"revisionTime": "2016-05-24T23:42:29Z"
+		},
+		{
+			"checksumSHA1": "k+4Tm4PZMdv57EliNFKxNShHZ+k=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "8d64eb7173c7753d6419fd4a9caf057398611364",
+			"revisionTime": "2016-05-24T23:42:29Z"
+		}
+	],
+	"rootPath": "github.com/francoishill/log"
+}
