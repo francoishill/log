@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/apex/log"
-	"github.com/apex/log/handlers/json"
+	"github.com/francoishill/log"
+	"github.com/francoishill/log/handlers/json"
 )
 
 func main() {

@@ -10,7 +10,7 @@ import (
 
 	"github.com/tj/go-elastic/batch"
 
-	"github.com/apex/log"
+	"github.com/francoishill/log"
 )
 
 // TODO(tj): allow index configuration

@@ -6,7 +6,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/apex/log"
+	"github.com/francoishill/log"
 	"github.com/go-logfmt/logfmt"
 )
 
