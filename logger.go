@@ -68,6 +68,11 @@ func (l *Logger) Info(msg string) {
 	NewEntry(l).Info(msg)
 }
 
+// Notice level message.
+func (l *Logger) Notice(msg string) {
+	NewEntry(l).Notice(msg)
+}
+
 // Warn level message.
 func (l *Logger) Warn(msg string) {
 	NewEntry(l).Warn(msg)
@@ -78,9 +83,19 @@ func (l *Logger) Error(msg string) {
 	NewEntry(l).Error(msg)
 }
 
-// Fatal level message, followed by an exit.
-func (l *Logger) Fatal(msg string) {
-	NewEntry(l).Fatal(msg)
+// Critical level message, followed by an exit.
+func (l *Logger) Critical(msg string) {
+	NewEntry(l).Critical(msg)
+}
+
+// Alert level message, followed by an exit.
+func (l *Logger) Alert(msg string) {
+	NewEntry(l).Alert(msg)
+}
+
+// Emergency level message, followed by an exit.
+func (l *Logger) Emergency(msg string) {
+	NewEntry(l).Emergency(msg)
 }
 
 // Debugf level formatted message.
@@ -93,6 +108,11 @@ func (l *Logger) Infof(msg string, v ...interface{}) {
 	NewEntry(l).Infof(msg, v...)
 }
 
+// Noticef level formatted message.
+func (l *Logger) Noticef(msg string, v ...interface{}) {
+	NewEntry(l).Noticef(msg, v...)
+}
+
 // Warnf level formatted message.
 func (l *Logger) Warnf(msg string, v ...interface{}) {
 	NewEntry(l).Warnf(msg, v...)
@@ -103,9 +123,19 @@ func (l *Logger) Errorf(msg string, v ...interface{}) {
 	NewEntry(l).Errorf(msg, v...)
 }
 
-// Fatalf level formatted message, followed by an exit.
-func (l *Logger) Fatalf(msg string, v ...interface{}) {
-	NewEntry(l).Fatalf(msg, v...)
+// Criticalf level formatted message, followed by an exit.
+func (l *Logger) Criticalf(msg string, v ...interface{}) {
+	NewEntry(l).Criticalf(msg, v...)
+}
+
+// Alertf level formatted message, followed by an exit.
+func (l *Logger) Alertf(msg string, v ...interface{}) {
+	NewEntry(l).Alertf(msg, v...)
+}
+
+// Emergencyf level formatted message, followed by an exit.
+func (l *Logger) Emergencyf(msg string, v ...interface{}) {
+	NewEntry(l).Emergencyf(msg, v...)
 }
 
 // Trace returns a new entry with a Stop method to fire off

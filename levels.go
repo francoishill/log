@@ -11,17 +11,23 @@ type Level int
 const (
 	DebugLevel Level = iota
 	InfoLevel
+	NoticeLevel
 	WarnLevel
 	ErrorLevel
-	FatalLevel
+	CriticalLevel
+	AlertLevel
+	EmergencyLevel
 )
 
 var levelNames = [...]string{
-	DebugLevel: "debug",
-	InfoLevel:  "info",
-	WarnLevel:  "warn",
-	ErrorLevel: "error",
-	FatalLevel: "fatal",
+	DebugLevel:     "debug",
+	InfoLevel:      "info",
+	NoticeLevel:    "notice",
+	WarnLevel:      "warn",
+	ErrorLevel:     "error",
+	CriticalLevel:  "critical",
+	AlertLevel:     "alert",
+	EmergencyLevel: "emergency",
 }
 
 // String implements io.Stringer.
@@ -41,12 +47,18 @@ func ParseLevel(s string) (Level, error) {
 		return DebugLevel, nil
 	case "info":
 		return InfoLevel, nil
+	case "notice":
+		return NoticeLevel, nil
 	case "warn", "warning":
 		return WarnLevel, nil
 	case "error":
 		return ErrorLevel, nil
-	case "fatal":
-		return FatalLevel, nil
+	case "critical":
+		return CriticalLevel, nil
+	case "alert":
+		return AlertLevel, nil
+	case "emergency":
+		return EmergencyLevel, nil
 	default:
 		return -1, errors.New("invalid level")
 	}

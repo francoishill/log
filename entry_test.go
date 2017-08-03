@@ -35,5 +35,5 @@ func TestEntry_WithError(t *testing.T) {
 	a := NewEntry(nil)
 	b := a.WithError(fmt.Errorf("boom"))
 	assert.Equal(t, Fields{}, a.mergedFields())
-	assert.Equal(t, Fields{"error": "boom"}, b.mergedFields())
+	assert.Equal(t, Fields{"error": fmt.Errorf("boom")}, b.mergedFields())
 }

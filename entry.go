@@ -58,6 +58,11 @@ func (e *Entry) Info(msg string) {
 	e.Logger.log(InfoLevel, e, msg)
 }
 
+// Notice level message.
+func (e *Entry) Notice(msg string) {
+	e.Logger.log(NoticeLevel, e, msg)
+}
+
 // Warn level message.
 func (e *Entry) Warn(msg string) {
 	e.Logger.log(WarnLevel, e, msg)
@@ -68,9 +73,21 @@ func (e *Entry) Error(msg string) {
 	e.Logger.log(ErrorLevel, e, msg)
 }
 
-// Fatal level message, followed by an exit.
-func (e *Entry) Fatal(msg string) {
-	e.Logger.log(FatalLevel, e, msg)
+// Critical level message, followed by an exit.
+func (e *Entry) Critical(msg string) {
+	e.Logger.log(CriticalLevel, e, msg)
+	os.Exit(1)
+}
+
+// Alert level message, followed by an exit.
+func (e *Entry) Alert(msg string) {
+	e.Logger.log(AlertLevel, e, msg)
+	os.Exit(1)
+}
+
+// Emergency level message, followed by an exit.
+func (e *Entry) Emergency(msg string) {
+	e.Logger.log(EmergencyLevel, e, msg)
 	os.Exit(1)
 }
 
@@ -84,6 +101,11 @@ func (e *Entry) Infof(msg string, v ...interface{}) {
 	e.Info(fmt.Sprintf(msg, v...))
 }
 
+// Noticef level formatted message.
+func (e *Entry) Noticef(msg string, v ...interface{}) {
+	e.Notice(fmt.Sprintf(msg, v...))
+}
+
 // Warnf level formatted message.
 func (e *Entry) Warnf(msg string, v ...interface{}) {
 	e.Warn(fmt.Sprintf(msg, v...))
@@ -94,9 +116,19 @@ func (e *Entry) Errorf(msg string, v ...interface{}) {
 	e.Error(fmt.Sprintf(msg, v...))
 }
 
-// Fatalf level formatted message, followed by an exit.
-func (e *Entry) Fatalf(msg string, v ...interface{}) {
-	e.Fatal(fmt.Sprintf(msg, v...))
+// Criticalf level formatted message, followed by an exit.
+func (e *Entry) Criticalf(msg string, v ...interface{}) {
+	e.Critical(fmt.Sprintf(msg, v...))
+}
+
+// Alertf level formatted message, followed by an exit.
+func (e *Entry) Alertf(msg string, v ...interface{}) {
+	e.Alert(fmt.Sprintf(msg, v...))
+}
+
+// Emergencyf level formatted message, followed by an exit.
+func (e *Entry) Emergencyf(msg string, v ...interface{}) {
+	e.Emergency(fmt.Sprintf(msg, v...))
 }
 
 // Trace returns a new entry with a Stop method to fire off
