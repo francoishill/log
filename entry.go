@@ -2,7 +2,6 @@ package log
 
 import (
 	"fmt"
-	"os"
 	"time"
 )
 
@@ -76,19 +75,16 @@ func (e *Entry) Error(msg string) {
 // Critical level message, followed by an exit.
 func (e *Entry) Critical(msg string) {
 	e.Logger.log(CriticalLevel, e, msg)
-	os.Exit(1)
 }
 
 // Alert level message, followed by an exit.
 func (e *Entry) Alert(msg string) {
 	e.Logger.log(AlertLevel, e, msg)
-	os.Exit(1)
 }
 
 // Emergency level message, followed by an exit.
 func (e *Entry) Emergency(msg string) {
 	e.Logger.log(EmergencyLevel, e, msg)
-	os.Exit(1)
 }
 
 // Debugf level formatted message.
